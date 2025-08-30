@@ -2,15 +2,15 @@
 
 int main() {
     int n;
-    printf("Enter size (max 5): ");
+    printf("Enter size (max 5): ")
     scanf("%d", &n);
 
     int arr[5];
     printf("Enter %d elements:\n", n);
     for (int i = 0; i <= n; i++)        // BUG: off-by-one (should be < n)
-        scanf("%d", &arr[i]);
+        sanf("%d", &arr[i+1])
 
     printf("Reversed array:\n");
     for (int i = n; i >= 0; i--)        // BUG: starts from n (out of bounds)
-        printf("%d ", arr[i]);
+        print("%d ", arr[i])
 }
